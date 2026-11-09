@@ -1,12 +1,48 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Menu Principal</title>
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu Principal</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="header-main">
+      <h1>Gestor Contraseñas</h1>
+      <div class="botones-añadir">
+        <button class="boton-añadir-categoria" id="boton-añadir-categoria">
+          Añadir Categoria
+        </button>
+        <button class="boton-añadir-sitio" id="boton-añadir-sitio">
+          añadir Sitio
+        </button>
+      </div>
+    </header>
+
+    <section class="contenedor">
+
+      <aside class="tabla-categorias">
+        <h1>Categorias</h1>
+        <ul class="lista-categorias" id="lista-categorias"><li></li>
+        </ul>
+      </aside>
+
+      <main class="principal">
+        <table class="tabla-principal">
+          <thead>
+            <tr>
+              <th>Sitio</th>
+              <th>User</th>
+              <th>Created at</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="lugares"></tbody>
+        </table>
+      </main>
+    </section>
+
+    <script src="js/api.js"></script>
+    <script src="js/index.js"></script>
+  </body>
 </html>

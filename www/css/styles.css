@@ -1,0 +1,80 @@
+.header-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #ddd;
+}
+.botones-añadir button {
+  padding: 8px 16px;
+  margin-left: 8px;
+  cursor: pointer;
+  border: 1px solid #007bff;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 4px;
+}
+.botones-añadir button:hover {
+  background-color: #0056b3;
+}
+
+
+.contenedor {
+  display: flex;
+  gap: 20px;
+}
+.tabla-categorias {
+  width: 250px;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.tabla-categorias h1 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.lista-categorias {
+  list-style: none;
+}
+
+.lista-categorias li {
+  padding: 8px 12px;
+  margin-bottom: 6px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.lista-categorias li:hover {
+  background-color: #e9ecef;
+  border-color: #ccc;
+}
+
+.principal {
+  flex: 1;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+.tabla-principal {
+  width: 100%;
+  border-collapse: collapse;
+}
+.tabla-principal th,
+.tabla-principal td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.tabla-principal th {
+  background-color: #207bd56e;
+  color: #555;
+  border: 1px solid black;
+}
