@@ -42,6 +42,23 @@
       </main>
     </section>
 
+
+    <dialog id="modal-categoria">
+      <form method="dialog" id="form-categoria">
+        <h3>Nueva categoría</h3>
+        <label for="nombre-categoria">Nombre:</label>
+        <input
+          type="text"
+          id="nombre-categoria"
+          required
+          placeholder="Nombre de categoría"
+        />
+        <div class="acciones-modal">
+          <button type="button" id="boton-cancelar-cat">Cancel</button>
+          <button type="submit" id="boton-guardar-cat">OK</button>
+        </div>
+      </form>
+    </dialog>
     <script src="js/api.js"></script>
     <script src="js/index.js"></script>
   </body>

@@ -78,3 +78,48 @@
   color: #555;
   border: 1px solid black;
 }
+
+dialog {
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  width: 320px;
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+#form-categoria {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#form-categoria input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.acciones-modal {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.acciones-modal button {
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+#btn-guardar-cat {
+  background-color: #28a745;
+  color: #fff;
+  border-color: #28a745;
+}
