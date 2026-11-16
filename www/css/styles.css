@@ -42,6 +42,9 @@
 }
 
 .lista-categorias li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 8px 12px;
   margin-bottom: 6px;
   background-color: #f9f9f9;

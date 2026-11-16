@@ -26,12 +26,22 @@ async function cargarCategorias() {
     //llama a la funcion y la guarda en const
     const categorias = await api.getCategories();
     listaCategorias.innerHTML = "";
-    // Crea la lista con los 
+    // Crea la lista
     categorias.forEach((categoria) => {
         const li = document.createElement("li");
-        li.textContent = categoria.name;
+        const nombre = document.createElement("span");
+        nombre.textContent = categoria.name;
+        const botonEli = document.createElement("button");
+        botonEli.textContent = "❌";
+        // evento que elimina categoria
+        botonEli.addEventListener("click", async(evento) => {
+            await api.deleteCategory(categoria.id);
+            cargarCategorias();
+        });
+        li.appendChild(nombre);
+        li.appendChild(botonEli);
         listaCategorias.appendChild(li);
-    }) 
+    }); 
 }
 
 async function crearCategoria(evento) {
