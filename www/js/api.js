@@ -27,9 +27,11 @@ class ApiService {
   }
 
   async getSitesByCategory(catId) {
-    const res = await fetch(`${this.baseUrl}/categories/${catId}/sites`);
+    const res = await fetch(`${this.baseUrl}/sites?categoryId=${catId}`);
     if (!res.ok) throw new Error("Error al obtner los sitios");
-    return await res.json();
+    //devuelve todos los sitios y los filta por la categoria
+    const todosLosSitios = await res.json();
+    return todosLosSitios.filter((sitio) => sitio.categoryId == catId);
   }
 
   async createSite(data) {
