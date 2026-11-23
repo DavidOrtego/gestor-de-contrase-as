@@ -54,6 +54,7 @@ async function cargarCategorias() {
       evento.stopPropagation();
       await api.deleteCategory(categoria.id);
       cargarCategorias();
+      cargarSitios();
     });
 
     //mostar sitos al pulsar categoria
