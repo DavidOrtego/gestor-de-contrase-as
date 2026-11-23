@@ -1,12 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario</title>
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gestión de Sitio</title>
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-    
+  <main class="contenedor-formulario">
+    <h2 id="titulo-formulario">Añadir Nuevo Sitio</h2>
+
+    <form id="form-sitio">
+      <label for="sitio-nombre">Nombre del sitio *</label>
+      <input type="text" id="sitio-nombre" placeholder="Nombre" required />
+
+      <label for="sitio-usuario">Usuario *</label>
+      <input type="text" id="sitio-usuario" placeholder="usuario@correo.com" required />
+
+      <label for="sitio-password">Contraseña *</label>
+      <div class="grupo-password">
+        <input type="text" id="sitio-password" required />
+        <button type="button" id="btn-generar-pass" title="Generar contraseña aleatoria">🎲</button>
+      </div>
+
+      <label for="sitio-url">URL *</label>
+      <input type="url" id="sitio-url" placeholder="https://ejemplo.com" required />
+
+      <div class="botones-form">
+        <button type="button" id="btn-cancelar">Cancelar</button>
+        <button type="submit">Guardar</button>
+      </div>
+    </form>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/formulario.js"></script>
 </body>
 </html>

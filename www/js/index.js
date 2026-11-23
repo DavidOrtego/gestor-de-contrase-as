@@ -24,6 +24,16 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   //guardad
   formCategoria.addEventListener("submit", crearCategoria);
+
+  //boton del formulario
+  const botonAñadirSitio = document.getElementById("boton-añadir-sitio");
+  botonAñadirSitio.addEventListener("click", () => {
+    if (!categoriaSeleccionadaId) {
+      alert("Selecciona primero una categoría.");
+      return;
+    }
+    window.location.href = `formulario.html?categoryId=${categoriaSeleccionadaId}`;
+  });
 });
 
 async function cargarCategorias() {
@@ -75,7 +85,7 @@ async function crearCategoria(evento) {
   modalCategoria.close();
   cargarCategorias();
 }
-x
+
 async function cargarSitios(catId) {
   const sitios = await api.getSitesByCategory(catId);
   tablaLugares.innerHTML = "";
