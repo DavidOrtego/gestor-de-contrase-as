@@ -42,6 +42,9 @@
 }
 
 .lista-categorias li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 8px 12px;
   margin-bottom: 6px;
   background-color: #f9f9f9;
@@ -53,6 +56,12 @@
 .lista-categorias li:hover {
   background-color: #e9ecef;
   border-color: #ccc;
+}
+
+.lista-categorias li.seleccionada {
+  background-color: #d0e2ff;
+  font-weight: bold;
+  border-color: #3b82f6;
 }
 
 .principal {
@@ -118,7 +127,7 @@ dialog::backdrop {
   border: 1px solid #ccc;
 }
 
-#btn-guardar-cat {
+#boton-guardar-cat {
   background-color: #28a745;
   color: #fff;
   border-color: #28a745;
