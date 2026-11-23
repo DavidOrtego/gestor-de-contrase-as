@@ -132,3 +132,142 @@ dialog::backdrop {
   color: #fff;
   border-color: #28a745;
 }
+
+/* --- ESTILOS DE LA TABLA DE SITIOS (index.html) --- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  background-color: #ffffff;
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+th {
+  background-color: #f8fafc;
+  font-weight: 600;
+  color: #334155;
+}
+
+tbody tr:hover {
+  background-color: #f1f5f9;
+}
+
+/* Botones de acción dentro de la tabla (URL, Editar, Eliminar) */
+td button {
+  background: none;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  padding: 5px 8px;
+  margin-right: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+}
+
+td button:hover {
+  background-color: #e2e8f0;
+}
+
+/* --- ESTILOS DEL FORMULARIO (formulario.html) --- */
+.contenedor-formulario {
+  max-width: 450px;
+  margin: 50px auto;
+  padding: 25px 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contenedor-formulario h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #1e293b;
+}
+
+#form-sitio {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#form-sitio label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #475569;
+}
+
+#form-sitio input {
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+#form-sitio input:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+/* Fila de contraseña + botón generador */
+.grupo-password {
+  display: flex;
+  gap: 8px;
+}
+
+.grupo-password input {
+  flex: 1;
+}
+
+#btn-generar-pass {
+  padding: 0 14px;
+  background-color: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+#btn-generar-pass:hover {
+  background-color: #e2e8f0;
+}
+
+/* Botones inferiores (Cancelar y Guardar) */
+.botones-form {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.botones-form button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#btn-cancelar {
+  background-color: #e2e8f0;
+  color: #334155;
+}
+
+#btn-cancelar:hover {
+  background-color: #cbd5e1;
+}
+
+.botones-form button[type="submit"] {
+  background-color: #3b82f6;
+  color: #ffffff;
+}
+
+.botones-form button[type="submit"]:hover {
+  background-color: #2563eb;
+}
