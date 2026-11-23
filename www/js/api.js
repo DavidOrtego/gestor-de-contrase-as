@@ -35,10 +35,11 @@ class ApiService {
   }
 
   async createSite(data) {
-    const res = await fetch(`${this.baseUrl}/sites`, {
+    const { categoryId, name, url, user, password} = data;
+    const res = await fetch(`${this.baseUrl}/categories/${categoryId}`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
+      body: JSON.stringify({ name, url, user, password }),
     });
     if (!res.ok) throw new Error("Error al crear sitio");
     return await res.json();
